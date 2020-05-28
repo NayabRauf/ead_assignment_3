@@ -1,0 +1,41 @@
+﻿@model IEnumerable<eadproject.Models.Table>
+@{
+    ViewBag.Title = "ModelTown";
+}
+<h1 style="text-align:center">  Prayer Schedule System</h1>
+<br /><h2>ModelTown</h2>
+<table border="1">
+    <tr>
+        <th>Area</th>
+        <th>Masjid Name</th>
+        <th>Masjid Address</th>
+        <th>Fajr Time</th>
+        <th>Zuhar Time</th>
+        <th>Asar Time</th>
+        <th>Maghrib Time</th>
+        <th>Esha Time</th>
+        <th>Options</th>
+    </tr>
+   @foreach (var s in Model)
+{
+    <tr>
+        <td>@s.Area</td>
+        <td>@s.MasjidAddress</td>
+        <td>@s.MasjidName</td>
+        <td>@s.FajrTime</td>
+        <td>@s.ZuhrTime</td>
+        <td>@s.AsarTime</td>
+        <td>@s.MaghribTime</td>
+        <td>@s.EshaTime</td>
+        <td>
+            <a href="/Home/Edit/@s.Id">Edit</a>
+            <a href="/Home/Delete/@s.Id">Delete</a>
+        </td>
+    </tr>
+}
+</table>
+<form action="/Home/Add/ModelTown" method="get">
+    <input type="hidden" value="ModelTown" name="a" />
+    <br /><input type="submit" value="Add Record" />
+    &nbsp&nbsp&nbsp&nbsp&nbsp<a href="/Home/index" style="text-decoration: none "><b>Home</b></a>
+</form> 

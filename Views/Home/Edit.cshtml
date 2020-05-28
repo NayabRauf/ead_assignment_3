@@ -1,0 +1,21 @@
+﻿@model eadproject.Models.Table
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form action="/Home/EditRecord/@Model.Id/" method="get">
+     
+    Masjid Nmae :<input type="text" name="Masjidn" value="@Model.MasjidName">
+    Masjid Area:<input type="text" name="MasjidArea" value="@Model.MasjidAddress">
+    Fajr Time:<input type="time" name="FajrT" value="@Model.FajrTime">
+    Zuhr Time:<input type="time" name="ZuhrT" value="@Model.ZuhrTime">
+    Asar Time:<input type="time" name="AsarT" value="@Model.AsarTime">
+    Maghrib Time:<input type="time" name="MaghribT" value="@Model.MaghribTime">
+    Esha Time:<input type="time" name="EshaT" value="@Model.EshaTime">
+    <!--<input type="submit" value="Edit">-->
+   <br /> <br /><input type="submit" value="Edit" />
+    &nbsp&nbsp&nbsp&nbsp&nbsp<a href="/Home/index" style="text-decoration: none "><b>Home</b></a>
+
+</form>

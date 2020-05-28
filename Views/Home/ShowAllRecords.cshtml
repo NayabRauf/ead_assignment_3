@@ -1,0 +1,36 @@
+﻿@model IEnumerable<eadproject.Models.Table>
+@{
+    ViewBag.Title = "ShowAllRecords";
+}
+
+
+
+<h1 style="text-align:center">  Prayer Schedule System</h1>
+<br /><h2>Records</h2>
+<table border="1">
+    <tr>
+        <th>Area</th>
+        <th>Masjid Name</th>
+        <th>Masjid Address</th>
+        <th>Fajr Time</th>
+        <th>Zuhar Time</th>
+        <th>Asar Time</th>
+        <th>Maghrib Time</th>
+        <th>Esha Time</th>
+    </tr>
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.Area</td>
+            <td>@s.MasjidAddress</td>
+            <td>@s.MasjidName</td>
+            <td>@s.FajrTime</td>
+            <td>@s.ZuhrTime</td>
+            <td>@s.AsarTime</td>
+            <td>@s.MaghribTime</td>
+            <td>@s.EshaTime</td>
+        </tr>
+    }
+</table>
+<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp<a href="/Home/index" style="text-decoration: none "><b>Home</b></a>

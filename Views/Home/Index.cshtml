@@ -1,0 +1,49 @@
+﻿<!--Select Category:
+<select id="CategorySelector">
+    <option value="0">Select</option>
+    <option value="BahriaTown">Bahria Town</option>
+    <option value="ModelTown">Model Town</option>
+    <option value="MuslimTown">Muslim Town</option>
+    <option value="Thokar">Thokar</option>
+</select>
+<div id="d1"></div>
+<script>
+    $('#CategorySelector').change(function () {
+        var value = $('#CategorySelector').val();
+        $('#d1').load('/Home/category?cat=' + value);
+            
+    });
+</script>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    
+</head>
+<body>
+    <h1 style="text-align: center;">  Prayer Schedule System</h1>
+    <header>
+        <div class="content-wrapper">
+           
+            <div class="float-right">
+                
+                <nav id="menu">
+                    <ul>
+                        <li class="nav1"><a href="/Home/index">Home</a></li>
+                        <li class="nav2"><a href="/Home/BahriaTown" style="text-decoration: none ;color:green"><b>Bahria Town</b></a></li>
+                        <li class="nav3"><a href="/Home/MuslimTown" style="text-decoration: none ;color:green"><b>Muslim Town</b></a></li>
+                        <li class="nav4"><a href="/Home/ModelTown" style="text-decoration: none ;color:green"><b>Model Town</b></a></li>
+                        <li class="nav5"><a href="/Home/Thokar" style="text-decoration: none ;color:green"><b>Thokar</b></a></li>
+                        <li class="nav5"><a href="/Home/ShowAllRecords" style="text-decoration: none ;color:brown"><b>Show All Records</b></a></li>
+                        <li class="nav5"><a href="/Home/DeleteAllRecords" style="text-decoration: none ;color:brown"><b>Delete All Records</b></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+   
+</body>
+</html>

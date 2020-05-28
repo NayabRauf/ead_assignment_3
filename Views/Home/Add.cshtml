@@ -1,0 +1,67 @@
+﻿@model eadproject.Models.Table
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+<h2>@Model.Area</h2>
+
+    <!DOCTYPE HTML>
+    <html>
+    <head>
+        <title></title>
+        <script type="text/javaScript">
+            function validate() {
+
+                if (document.emp.Masjidn.value == "") {
+                    alert("Masjid Name is empty!!");
+                    return false;
+                }
+                if (document.emp.MasjidArea.value == "") {
+                    alert("Masjid Address is empty!!");
+                    return false;
+                }
+                if (document.emp.FajrT.value == "") {
+                    alert("Fajr Time is empty!!");
+                    return false;
+                }
+                if (document.emp.ZuhrT.value == "") {
+                    alert("Zuhr Time is empty!!");
+                    return false;
+                }
+                if (document.emp.AsarT.value == "") {
+                    alert("Asar Time is empty!!");
+                    return false;
+                }
+                if (document.emp.MaghribT.value == "") {
+                    alert("Maghrib Time is empty!!");
+                    return false;
+                }
+                if (document.emp.EshaT.value == "") {
+                    alert("Esha Time is empty!!");
+                    return false;
+                }
+                return true;
+
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+        <form name="emp" action="/Home/AddRecord/@Model.Area" method="get" onsubmit="return validate()">
+            <h2>Area : <input type="text" name="area" value="@Model.Area" /></h2>
+            <h2>Masjid Name : <input type="text" name="Masjidn"></h2>
+            <h2>Masjid Address : <input type="text" name="MasjidArea"></h2>
+            <h2>Fajr Time : <input type="time" name="FajrT"></h2>
+            <h2>Zuhar Time : <input type="time" name="ZuhrT"></h2>
+            <h2>Asar Time : <input type="time" name="AsarT"></h2>
+            <h2>Maghrib Time : <input type="time" name="MaghribT"></h2>
+            <h2>Esha Time : <input type="time" name="EshaT"></h2>
+            <!--<br /><input type="submit" value="Add" /> -->
+            <br /><input type="submit" value="Add" />
+            &nbsp&nbsp&nbsp&nbsp&nbsp<a href="/Home/index" style="text-decoration: none "><b>Home</b></a>
+        </form>
+    </body>
+</html>
